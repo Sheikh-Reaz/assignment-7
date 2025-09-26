@@ -16,30 +16,16 @@ const fetchTickets = async() => {
 function App() {
 
   const [ticketSelected,setTicketSelected] = useState([])
-  const [resolvedTickets, setResolvedTickets] = useState([]);
-  const [ticketData, setTicketData] = useState([]);
   // console.log(ticketSelected)
-  
-
-
-
   const ticketPromise = fetchTickets()
 
   return (
     <>
     
       <Navbar1></Navbar1>
-      <Banner resolvedTickets={resolvedTickets} ticketSelected={ticketSelected} ></Banner>
+      <Banner ticketSelected={ticketSelected} ></Banner>
       <Suspense   >
-        <Tickets 
-         ticketData={ticketData}
-        setTicketData={setTicketData}
-        ticketSelected={ticketSelected} 
-        setTicketSelected={setTicketSelected} 
-        ticketPromise={ticketPromise}
-        resolvedTickets={resolvedTickets}
-        setResolvedTickets={setResolvedTickets}
-        >
+        <Tickets ticketSelected={ticketSelected} setTicketSelected={setTicketSelected} ticketPromise={ticketPromise} >
 
         </Tickets>
       </Suspense>
