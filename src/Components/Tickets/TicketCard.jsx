@@ -5,7 +5,7 @@ const TicketCard = ({ticket,ticketSelected,setTicketSelected}) => {
     
  const handleClicked = () =>{
     setTicketSelected([...ticketSelected,ticket]);
-    
+
     
  }
     return (
@@ -33,7 +33,7 @@ const TicketCard = ({ticket,ticketSelected,setTicketSelected}) => {
             <div className="flex justify-between pt-2 ">
               <div className="flex justify-between gap-2 ">
                 <p># {ticket.id}</p>
-                <p> {ticket.priority} </p>
+                <p className={`${ticket.priority === 'High'? "text-red-500" : ticket.priority == 'Medium'? "text-[#F3BF0C]" : "text-green-600" }`} > {ticket.priority} </p>
               </div>
               <div className="flex justify-between gap-2 ">
                 <p>{ticket.customer}</p>

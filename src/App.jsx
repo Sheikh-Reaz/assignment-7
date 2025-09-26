@@ -16,7 +16,11 @@ const fetchTickets = async() => {
 function App() {
 
   const [ticketSelected,setTicketSelected] = useState([])
-  console.log(ticketSelected)
+  // console.log(ticketSelected)
+  
+
+
+
   const ticketPromise = fetchTickets()
 
   return (

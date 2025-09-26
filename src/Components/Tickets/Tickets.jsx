@@ -3,7 +3,7 @@ import Ticket from "./Ticket";
 import Task_Status from "../Status/Task_Status";
 import Resolved from "../Resolved/Resolved";
 
-const Tickets = ({ ticketPromise,setTicketSelected,ticketSelected }) => {
+const Tickets = ({ ticketPromise,setTicketSelected,ticketSelected, }) => {
   const ticketData = use(ticketPromise);
 //   console.log(ticketData);
 
