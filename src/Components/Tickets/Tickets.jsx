@@ -3,7 +3,7 @@ import Ticket from "./Ticket";
 import Task_Status from "../Status/Task_Status";
 import Resolved from "../Resolved/Resolved";
 
-const Tickets = ({ ticketPromise,setTicketSelected,ticketSelected, }) => {
+const Tickets = ({ ticketPromise,setTicketSelected,ticketSelected,resolvedTickets,setResolvedTickets }) => {
   const ticketData = use(ticketPromise);
 //   console.log(ticketData);
 
@@ -18,7 +18,7 @@ const Tickets = ({ ticketPromise,setTicketSelected,ticketSelected, }) => {
 
         <div className="grid col-span-1">
           <div>
-            <Task_Status ticketSelected={ticketSelected} />
+            <Task_Status ticketSelected={ticketSelected} resolvedTickets={resolvedTickets} setResolvedTickets={setResolvedTickets} />
             <Resolved ticketSelected={ticketSelected}  />
           </div>
         </div>

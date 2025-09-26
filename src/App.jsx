@@ -16,6 +16,7 @@ const fetchTickets = async() => {
 function App() {
 
   const [ticketSelected,setTicketSelected] = useState([])
+  const [resolvedTickets, setResolvedTickets] = useState([]);
   // console.log(ticketSelected)
   
 
@@ -29,7 +30,13 @@ function App() {
       <Navbar1></Navbar1>
       <Banner ticketSelected={ticketSelected} ></Banner>
       <Suspense   >
-        <Tickets ticketSelected={ticketSelected} setTicketSelected={setTicketSelected} ticketPromise={ticketPromise} >
+        <Tickets 
+        ticketSelected={ticketSelected} 
+        setTicketSelected={setTicketSelected} 
+        ticketPromise={ticketPromise}
+        resolvedTickets={resolvedTickets}
+        setResolvedTickets={setResolvedTickets}
+        >
 
         </Tickets>
       </Suspense>
