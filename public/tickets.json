@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue",
+    "description": "Customer is unable to login to the application despite using the correct username and password. They have tried resetting the password multiple times, clearing browser cache, and using different devices, but the issue persists.",
+    "customer": "Alice Johnson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-20"
+  },
+  {
+    "id": 2,
+    "title": "Payment failure",
+    "description": "Customer reported that their payment failed during checkout. They attempted using multiple credit cards and PayPal, but the transaction keeps failing with an error message. Urgent resolution is required as this is preventing order completion.",
+    "customer": "Bob Smith",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-20"
+  },
+  {
+    "id": 3,
+    "title": "Bug in mobile app",
+    "description": "Customer experiences frequent crashes when opening notifications in the mobile app. They have updated to the latest version and restarted their device, but the app continues to crash, making it impossible to stay updated on alerts.",
+    "customer": "Catherine Lee",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-21"
+  },
+  {
+    "id": 4,
+    "title": "Feature request",
+    "description": "Customer suggested adding a dark mode option to the dashboard to reduce eye strain during night-time usage. They provided mockups and explained that this would enhance user experience for many users who work late hours.",
+    "customer": "David Brown",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-21"
+  },
+  {
+    "id": 5,
+    "title": "Password reset",
+    "description": "Customer forgot their password and cannot reset it using the standard password recovery flow. They have not received the reset email even after multiple attempts and need assistance urgently to regain access.",
+    "customer": "Ella White",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-21"
+  },
+  {
+    "id": 6,
+    "title": "Order not received",
+    "description": "Customer placed order #2345 two weeks ago but has not received the package yet. They contacted the delivery service, but there is no update. Customer requests immediate follow-up and resolution.",
+    "customer": "Frank Harris",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-22"
+  },
+  {
+    "id": 7,
+    "title": "Incorrect invoice",
+    "description": "Customer received an invoice with an incorrect total amount. The invoice includes charges for items they did not purchase. They request urgent correction and clarification before processing payment.",
+    "customer": "Grace Taylor",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-22"
+  },
+  {
+    "id": 8,
+    "title": "App update issue",
+    "description": "Customer is unable to update the mobile app to the latest version. The update fails repeatedly with an unknown error. They tried reinstalling the app, but the problem persists, preventing them from accessing new features.",
+    "customer": "Henry Wilson",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-22"
+  },
+  {
+    "id": 9,
+    "title": "Shipping address change",
+    "description": "Customer wants to change the shipping address for their order that has not yet been dispatched. They provided the new address but are unsure if the change has been applied. Immediate confirmation is requested.",
+    "customer": "Isabella Martinez",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-23"
+  },
+  {
+    "id": 10,
+    "title": "Refund request",
+    "description": "Customer cancelled their order but has not received a refund. They have checked their bank account and transaction history but found no refund. They request a status update and immediate processing of the refund.",
+    "customer": "Jack Robinson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-23"
+  },
+  {
+    "id": 11,
+    "title": "Account suspension",
+    "description": "Customer’s account was suspended without any prior notice. They claim they have followed all terms and conditions. They need assistance to understand the reason and reactivate the account as soon as possible.",
+    "customer": "Karen Clark",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-23"
+  },
+  {
+    "id": 12,
+    "title": "Slow website",
+    "description": "Customer reports that the website loads very slowly, making it difficult to navigate. They experience delays on multiple browsers and devices. They request urgent optimization to improve website speed and usability.",
+    "customer": "Liam Lewis",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-24"
+  },
+  {
+    "id": 13,
+    "title": "Coupon code not working",
+    "description": "Customer tried applying a promotional coupon during checkout, but the system shows an error and does not apply the discount. They verified the code is valid and request assistance to apply the discount correctly.",
+    "customer": "Mia Walker",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2025-09-24"
+  },
+  {
+    "id": 14,
+    "title": "Notification issues",
+    "description": "Customer is not receiving email or push notifications despite enabling all notification settings. They rely on notifications for important updates and need troubleshooting to ensure timely alerts.",
+    "customer": "Noah Hall",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-24"
+  },
+  {
+    "id": 15,
+    "title": "Profile update error",
+    "description": "Customer attempts to update their profile picture but encounters an error message every time they upload a new image. They have tried different file types and sizes without success and need assistance resolving the issue.",
+    "customer": "Olivia Allen",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-25"
+  }
+]
