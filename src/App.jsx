@@ -17,6 +17,7 @@ function App() {
 
   const [ticketSelected,setTicketSelected] = useState([])
   const [resolvedTickets, setResolvedTickets] = useState([]);
+  const [ticketData, setTicketData] = useState([]);
   // console.log(ticketSelected)
   
 
@@ -28,9 +29,11 @@ function App() {
     <>
     
       <Navbar1></Navbar1>
-      <Banner ticketSelected={ticketSelected} ></Banner>
+      <Banner resolvedTickets={resolvedTickets} ticketSelected={ticketSelected} ></Banner>
       <Suspense   >
         <Tickets 
+         ticketData={ticketData}
+        setTicketData={setTicketData}
         ticketSelected={ticketSelected} 
         setTicketSelected={setTicketSelected} 
         ticketPromise={ticketPromise}

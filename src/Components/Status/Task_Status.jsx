@@ -2,7 +2,7 @@ import React from "react";
 import TaskCard from "./TaskCard";
 
 
-const Task_Status = ({ticketSelected,resolvedTickets,setResolvedTickets}) => {
+const Task_Status = ({ticketSelected,setTicketSelected , resolvedTickets,setResolvedTickets}) => {
 
     //  console.log(ticketSelected);
      
@@ -19,9 +19,15 @@ const Task_Status = ({ticketSelected,resolvedTickets,setResolvedTickets}) => {
 <div>
     {
        ticketSelected.map((eachTicket) => <TaskCard 
+       key={eachTicket.id}
        resolvedTickets={resolvedTickets} 
        setResolvedTickets={setResolvedTickets}
-       eachTicket={eachTicket} ></TaskCard> )
+       eachTicket={eachTicket} 
+       ticketSelected={ticketSelected}
+       setTicketSelected={setTicketSelected}
+       >
+      
+       </TaskCard> )
     }
 </div>
     </div>

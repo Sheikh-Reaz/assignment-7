@@ -1,10 +1,16 @@
 import React from 'react';
 
-const TicketCard = ({ticket,ticketSelected,setTicketSelected}) => {
+const TicketCard = ({ticket,ticketSelected,setTicketSelected,setTicketData}) => {
 
     
  const handleClicked = () =>{
     setTicketSelected([...ticketSelected,ticket]);
+
+      // Add to Task Status
+  setTicketSelected(prev => [...prev, ticket]);
+
+  // Remove from main ticket list
+  setTicketData(prev => prev.filter(t => t.id !== ticket.id));
 
     
  }
