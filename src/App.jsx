@@ -1,38 +1,45 @@
+import "./App.css";
+import Navbar1 from "./Components/Navbar/Navbar1";
+import Footer from "./Components/Footer/Footer";
+import Banner from "./Components/Banner/Banner";
+import Tickets from "./Components/Tickets/Tickets";
+import { Suspense } from "react";
+import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 
-import './App.css'
-import Navbar1 from './Components/Navbar/Navbar1'
-import Footer from './Components/Footer/Footer'
-import Banner from './Components/Banner/Banner'
-import Tickets from './Components/Tickets/Tickets'
-import { Suspense } from 'react'
-import { useState } from 'react'
-
-const fetchTickets = async() => {
-  const res = await fetch("/tickets.json")
+const fetchTickets = async () => {
+  const res = await fetch("/tickets.json");
   return res.json();
-
-}
+};
 
 function App() {
-
-  const [ticketSelected,setTicketSelected] = useState([])
-  // console.log(ticketSelected)
-  const ticketPromise = fetchTickets()
+  const [ticketSelected, setTicketSelected] = useState([]);
+  const [ticketClicked, setTicketClicked] = useState([]);
+  // console.log(ticketClicked)
+  const ticketPromise = fetchTickets();
 
   return (
     <>
-    
       <Navbar1></Navbar1>
-      <Banner ticketSelected={ticketSelected} ></Banner>
-      <Suspense   >
-        <Tickets ticketSelected={ticketSelected} setTicketSelected={setTicketSelected} ticketPromise={ticketPromise} >
+      <Banner 
+      ticketSelected={ticketSelected}
+      ticketClicked={ticketClicked} 
+      ></Banner>
+      <Suspense>
+        <Tickets
+        ticketClicked={ticketClicked}
+        setTicketClicked={setTicketClicked}
 
-        </Tickets>
+          ticketSelected={ticketSelected}
+          setTicketSelected={setTicketSelected}
+          ticketPromise={ticketPromise}
+        ></Tickets>
       </Suspense>
 
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

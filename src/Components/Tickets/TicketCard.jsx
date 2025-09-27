@@ -1,9 +1,11 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const TicketCard = ({ticket,ticketSelected,setTicketSelected}) => {
 
     
  const handleClicked = () =>{
+  toast('✅  In Progress')
     setTicketSelected([...ticketSelected,ticket]);
 
     

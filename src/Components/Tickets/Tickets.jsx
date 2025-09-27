@@ -3,9 +3,15 @@ import Ticket from "./Ticket";
 import Task_Status from "../Status/Task_Status";
 import Resolved from "../Resolved/Resolved";
 
-const Tickets = ({ ticketPromise,setTicketSelected,ticketSelected }) => {
+const Tickets = ({
+  ticketPromise,
+  setTicketSelected,
+  ticketSelected,
+  ticketClicked,
+  setTicketClicked,
+}) => {
   const ticketData = use(ticketPromise);
-//   console.log(ticketData);
+  //   console.log(ticketData);
 
   return (
     <div className="bg-[#F5F5F5]">
@@ -14,12 +20,24 @@ const Tickets = ({ ticketPromise,setTicketSelected,ticketSelected }) => {
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1440px] mx-auto p-2.5  ">
         {/* Ticket */}
-        <Ticket ticketSelected={ticketSelected} setTicketSelected={setTicketSelected} ticketData={ticketData}></Ticket>
+        <Ticket
+          ticketSelected={ticketSelected}
+          setTicketSelected={setTicketSelected}
+          ticketData={ticketData}
+        ></Ticket>
 
         <div className="grid col-span-1">
           <div>
-            <Task_Status ticketSelected={ticketSelected} />
-            <Resolved ticketSelected={ticketSelected}  />
+            <Task_Status
+              ticketSelected={ticketSelected}
+              ticketClicked={ticketClicked}
+              setTicketClicked={setTicketClicked}
+            />
+            <Resolved
+              ticketClicked={ticketClicked}
+              setTicketClicked={setTicketClicked}
+              ticketSelected={ticketSelected}
+            />
           </div>
         </div>
       </div>
