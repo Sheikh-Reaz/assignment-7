@@ -1,16 +1,34 @@
-# React + Vite
+## 📌 What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**JSX (JavaScript XML)** is a syntax extension that allows writing HTML-like code inside JavaScript.  
+It makes the UI code easier to read and write.
 
-Currently, two official plugins are available:
+**Why it is used:**
+- Combines UI (HTML) with logic (JavaScript).
+- Increases code readability.
+- Compiles into JavaScript, which browsers can understand.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📌 What is the difference between State and Props?
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **State**  
+  - Managed within the component.  
+  - Mutable (can be updated).  
+  - Used for data that changes over time.  
 
-## Expanding the ESLint configuration
+- **Props**  
+  - Passed from parent to child components.  
+  - Immutable (read-only).  
+  - Used to pass data and functions.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 What is the `useState` hook, and how does it work?
+
+The `useState` hook lets functional components manage state.
+
+**How it works:**
+1. Import it:  
+   ```js
+   import { useState } from "react";
