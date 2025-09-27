@@ -4,6 +4,8 @@ import Task_Status from "../Status/Task_Status";
 import Resolved from "../Resolved/Resolved";
 
 const Tickets = ({
+  count,
+  setCount,
   ticketPromise,
   setTicketSelected,
   ticketSelected,
@@ -21,6 +23,7 @@ const Tickets = ({
       <div className=" grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1440px] mx-auto p-2.5  ">
         {/* Ticket */}
         <Ticket
+
           ticketSelected={ticketSelected}
           setTicketSelected={setTicketSelected}
           ticketData={ticketData}
@@ -29,6 +32,8 @@ const Tickets = ({
         <div className="grid col-span-1">
           <div>
             <Task_Status
+                      count={count}
+        setCount={setCount}
               ticketSelected={ticketSelected}
               ticketClicked={ticketClicked}
               setTicketClicked={setTicketClicked}

@@ -1,20 +1,30 @@
 import React from 'react';
+
+
 import { toast } from 'react-toastify';
 
 const TicketCard = ({ticket,ticketSelected,setTicketSelected}) => {
+  
 
     
  const handleClicked = () =>{
   toast('✅  In Progress')
     setTicketSelected([...ticketSelected,ticket]);
+    
+
+
 
     
 
     
  }
+
+
+
+
     return (
-<div onClick={ ()=> handleClicked() } >
-              <div className=" p-5  rounded-sm shadow-md bg-white ">
+<div  onClick={ ()=> handleClicked() } >
+              <div className=" cursor-pointer p-5  rounded-sm shadow-md bg-white ">
             <div className="flex justify-between pb-2 ">
               <h1 className="text-2xl font-medium text-[#001931] ">
                 {ticket.title}

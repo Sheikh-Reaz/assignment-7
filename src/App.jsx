@@ -12,9 +12,11 @@ const fetchTickets = async () => {
   return res.json();
 };
 
+
 function App() {
   const [ticketSelected, setTicketSelected] = useState([]);
   const [ticketClicked, setTicketClicked] = useState([]);
+  const [count, setCount] = useState(0);
   // console.log(ticketClicked)
   const ticketPromise = fetchTickets();
 
@@ -22,11 +24,15 @@ function App() {
     <>
       <Navbar1></Navbar1>
       <Banner 
+              count={count}
+        setCount={setCount}
       ticketSelected={ticketSelected}
       ticketClicked={ticketClicked} 
       ></Banner>
-      <Suspense>
+      <Suspense fallback= {<div className="flex justify-center" ><span className="loading loading-dots loading-xl"></span></div>}  >
         <Tickets
+        count={count}
+        setCount={setCount}
         ticketClicked={ticketClicked}
         setTicketClicked={setTicketClicked}
 
